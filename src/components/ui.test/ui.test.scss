@@ -1,0 +1,16 @@
+$animation-length: 250;
+$animation-length-ms: $animation-length + 0ms;
+
+// component is needed, otherwise becomes global
+.component {
+    .uitest{
+        transition: all $animation-length-ms ease-in;
+        opacity: 0;
+    }
+}
+.component.oppened{
+    .uitest{
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,16 @@
+<div class="test">
+    <h1>Main NComp</h1>
+    <p>This is our planet: {{ planet }}</p>
+
+    {{#wrapped}}{{name}} is awesome.{{/wrapped}}
+    
+    <!-- functions get's substituted by "window['NComps'][comp.uuid]" -->
+    <button onclick="{{ functions.close() }}">Close</button>
+    <button onclick="{{ functions.changeName() }}">Change name</button>
+    <button onclick="{{ functions.changePlanet() }}">Change Planet</button>
+    <p>Comp1: </p>
+    {{#comp}}TestUI{{/comp}}
+    <p>Comp2: </p>
+    {{#comp}}TestUI{{/comp}}
+
+</div>

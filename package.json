@@ -1,0 +1,46 @@
+{
+  "name": "ncomps",
+  "version": "1.0.0",
+  "description": "This is the framework to create TS classes with html and scss, importable through TS and HTML. No routing yet created",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build_depricated": "tsc && browserify dist/index.js -o dist/rss-widget.bundle.js",
+    "copy_to_integration": "cp dist/ncomps.bundle.js test/scripts/vendor/ncomps.bundle.js",
+    "build_copy_depricated": "npm run build && npm run copy_to_integration",
+    "copy": "npm run copy_to_integration",
+    "build": "webpack && npm run copy",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.13.6",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "css-loader": "^0.28.11",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.1",
+    "babel-core": "^6.26.3",
+    "case-sensitive-paths-webpack-plugin": "^2.1.2",
+    "css-hot-loader": "^1.3.9",
+    "file-loader": "^1.1.11",
+    "hogan.js": "^3.0.2",
+    "html-loader": "^0.5.5",
+    "jquery": "^3.3.1",
+    "npm": "^6.0.0",
+    "paths": "^0.1.1",
+    "postcss-loader": "^2.1.4",
+    "react-dev-utils": "^5.0.1",
+    "style-loader": "^0.21.0",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.3",
+    "url-loader": "^1.0.1"
+  }
+}
